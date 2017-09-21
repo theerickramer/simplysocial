@@ -20,7 +20,7 @@ export default class Nav extends Component {
               <img className="avatar" src="/static/images/user-avatar.png" />
             </li>
             <li>
-              <img className="dropdown-arrow" src="/static/images/down" />
+              <img className="dropdown-arrow" src="/static/images/down-arrow.png" />
             </li>
           </ul>
         </div>
@@ -28,7 +28,7 @@ export default class Nav extends Component {
           li {
             height: 30px;
           }
-          
+
           .nav {
             display: flex;
             padding: 10px 100px;
@@ -54,14 +54,18 @@ export default class Nav extends Component {
           }
 
           .search {
-            margin: 0 25px;
-            padding: 5px;
+            margin: 0 23px;
+            padding: 7px;
             background: url('/static/images/search-icon.png') no-repeat right 5px center;
             background-color: ${colors.darkGrey};
             border: 1px solid ${colors.medGrey};
             border-radius: 3px;
             outline: none;
             color: ${colors.white}
+          }
+
+          .dropdown-arrow {
+            margin-left: 20px;
           }
         `}</style>
       </nav>
