@@ -11,14 +11,14 @@ export default class Nav extends Component {
         <div className="nav__items-container">
           <ul className="nav__items">
             <li>
-              <img className="add-post-button" />
+              <img className="add-post-button" src="/static/images/new-message.png" />
             </li>
             <li>
               <input className="search" />
             </li>
             <li>
               <div className="user-options">
-                <img className="user-options__avatar" />
+                <img className="user-options__avatar" src="/static/images/user-avatar.png" />
                 <img className="user-options__dropdown-arrow" />
               </div>
             </li>
@@ -38,10 +38,26 @@ export default class Nav extends Component {
             width: 100%;
           }
 
-          ul,
+          .user-options__avatar {
+            height: 100%;
+            width: 100%;
+          }
+
+          .nav__items,
           .nav__logo {
             display: inline-flex;
             align-items: center;
+          }
+
+          .search {
+            margin: 0 25px;
+            padding: 5px;
+            background: url('/static/images/search-icon.png') no-repeat right 5px center;
+            background-color: ${colors.darkGrey};
+            border: 1px solid ${colors.medGrey};
+            border-radius: 3px;
+            outline: none;
+            color: ${colors.white}
           }
         `}</style>
       </nav>
