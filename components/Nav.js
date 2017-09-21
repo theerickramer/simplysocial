@@ -17,14 +17,18 @@ export default class Nav extends Component {
               <input className="search" />
             </li>
             <li>
-              <div className="user-options">
-                <img className="user-options__avatar" src="/static/images/user-avatar.png" />
-                <img className="user-options__dropdown-arrow" />
-              </div>
+              <img className="avatar" src="/static/images/user-avatar.png" />
+            </li>
+            <li>
+              <img className="dropdown-arrow" src="/static/images/down" />
             </li>
           </ul>
         </div>
         <style jsx>{`
+          li {
+            height: 30px;
+          }
+          
           .nav {
             display: flex;
             padding: 10px 100px;
