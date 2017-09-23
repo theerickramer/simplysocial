@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-import { colors, fonts } from '../static/css-constants.js';
+import NewMessage from './NewMessage';
+import { colors, fonts } from '../static/css-constants';
 
 export default class Header extends Component {
   render() {
     return (
       <header>
         <div className="hero">
-        
+          <NewMessage />
+          {/* <nav class="header__sub-nav"></nav> */}
         </div>
         <style jsx>{`
           .hero {
+            display: flex;
+            align-items: center;
             width: 100%;
             height: 420px;
             background-image: url('/static/images/hero.png');

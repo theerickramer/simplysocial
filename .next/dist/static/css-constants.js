@@ -6,11 +6,13 @@ Object.defineProperty(exports, "__esModule", {
 var colors = exports.colors = {
   white: '#FFFFFF',
   darkGrey: '#262728',
-  medGrey: '#44474b',
-  lightGrey: '#d9dce1'
+  medGrey: '#44474B',
+  lightGrey: '##DDE0E4',
+  turquoise: '#00CC99'
 };
 
 var fonts = exports.fonts = {
-  openSans: '"Open Sans", sans-serif'
+  openSans: '"Open Sans", sans-serif',
+  sourceSans: '"Source Sans Pro", sans-serif'
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0YXRpYy9jc3MtY29uc3RhbnRzLmpzIl0sIm5hbWVzIjpbImNvbG9ycyIsIndoaXRlIiwiZGFya0dyZXkiLCJtZWRHcmV5IiwibGlnaHRHcmV5IiwiZm9udHMiLCJvcGVuU2FucyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBTyxJQUFNO1NBQVMsQUFDYixBQUNQO1lBRm9CLEFBRVYsQUFDVjtXQUhvQixBQUdYLEFBQ1Q7YUFKSyxBQUFlLEFBSVQsQUFHYjtBQVBzQixBQUNwQjs7QUFNSyxJQUFNO1lBQU4sQUFBYyxBQUNUO0FBRFMsQUFDbkIiLCJmaWxlIjoiY3NzLWNvbnN0YW50cy5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvZXJpYy9kZXYvY2hhbGxlbmdlcy9JbnZpc2lvbi9zaW1wbHlzb2NpYWwifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0YXRpYy9jc3MtY29uc3RhbnRzLmpzIl0sIm5hbWVzIjpbImNvbG9ycyIsIndoaXRlIiwiZGFya0dyZXkiLCJtZWRHcmV5IiwibGlnaHRHcmV5IiwidHVycXVvaXNlIiwiZm9udHMiLCJvcGVuU2FucyIsInNvdXJjZVNhbnMiXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTTtTQUFTLEFBQ2IsQUFDUDtZQUZvQixBQUVWLEFBQ1Y7V0FIb0IsQUFHWCxBQUNUO2FBSm9CLEFBSVQsQUFDWDthQUxLLEFBQWUsQUFLVCxBQUdiO0FBUnNCLEFBQ3BCOztBQU9LLElBQU07WUFBUSxBQUNULEFBQ1Y7Y0FGSyxBQUFjLEFBRVA7QUFGTyxBQUNuQiIsImZpbGUiOiJjc3MtY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9lcmljL2Rldi9jaGFsbGVuZ2VzL0ludmlzaW9uL3NpbXBseXNvY2lhbCJ9
