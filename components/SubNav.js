@@ -10,12 +10,12 @@ export default class SubNav extends Component {
           <li className="sub-nav__item sub-nav__item--active">ALL POSTS</li>
           <li className="sub-nav__item">PHOTOS</li>
           <li className="sub-nav__item">VIDEOS</li>
-          <li className="sub-nav__item sub-nav__item--active">
+          <li className="sub-nav__item">
             <ul className="sub-nav__item--disclosures">
               <li className="sub-nav__item--disclosure">
                 <div className="icon three-lines" />
               </li>
-              <li className="sub-nav__item--disclosure">
+              <li className="sub-nav__item--disclosure sub-nav__item--active">
                 <div className="icon four-squares" />
               </li>
             </ul>
@@ -41,9 +41,6 @@ export default class SubNav extends Component {
             right: 0;
             border: none;
           }
-          .sub-nav__item--disclosure {
-            border: none;
-          }
           .sub-nav__item {
             display: inline-flex;
             margin-right: 35px;
@@ -55,8 +52,9 @@ export default class SubNav extends Component {
             border-bottom: 5px solid ${colors.turquoise};
           }
 
-          .sub-nav__item--active .sub-nav__item--disclosure {
+          .sub-nav__item--disclosure.sub-nav__item--active {
             opacity: 1;
+            border: none;
           }
 
           .sub-nav__item--disclosure {
