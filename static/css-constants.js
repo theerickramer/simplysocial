@@ -2,7 +2,7 @@ export const colors = {
   white: '#FFFFFF',
   darkGrey: '#262728',
   medGrey: '#44474B',
-  lightGrey: '##DDE0E4',
+  lightGrey: '#DDE0E4',
   turquoise: '#00CC99'
 }
 

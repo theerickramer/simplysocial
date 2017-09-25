@@ -8,7 +8,6 @@ export default class Header extends Component {
       <header>
         <div className="hero">
           <NewMessage />
-          {/* <nav class="header__sub-nav"></nav> */}
         </div>
         <style jsx>{`
           .hero {
