@@ -3,22 +3,24 @@ import { colors } from '../static/css-constants';
 
 export default class Post extends Component {
   render() {
-    const { id, name, text, time } = this.props;
+    const { id, avatar, name, text, time, more, image } = this.props;
     return (
       <li className="post" key={id}>
-        <img className="post__avatar" src="/static/images/user-avatar.png" />
+        <img className="post__avatar" src={avatar} />
         <div className="post__content">
           <h5 className="post__name">{name}</h5>
           <p
             className="post__text"
             dangerouslySetInnerHTML={{ __html: text }}
           />
-          <div className="post__extra">
-            <div className="post__expand">
-              <span>Expand</span>
-              <img src="/static/images/down-arrow.png" />
-            </div>
-          </div>
+          {more 
+            ? <div className="post__extra">
+                <div className="post__expand">
+                  <span>Expand</span>
+                  <img src="/static/images/down-arrow.png" />
+                </div>
+              </div>
+            : null}
         </div>
         <div className="post__options">
           <img className="post__reply" src="/static/images/reply-arrow.png" />
