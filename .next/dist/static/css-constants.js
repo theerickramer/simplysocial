@@ -6,7 +6,9 @@ Object.defineProperty(exports, "__esModule", {
 var colors = exports.colors = {
   white: '#FFFFFF',
   darkGrey: '#262728',
+  medDarkGrey: '#64686E',
   medGrey: '#44474B',
+  medLightGrey: '#D6D8DA',
   lightGrey: '#DDE0E4',
   turquoise: '#00CC99'
 };
@@ -15,4 +17,4 @@ var fonts = exports.fonts = {
   openSans: '"Open Sans", sans-serif',
   sourceSans: '"Source Sans Pro", sans-serif'
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0YXRpYy9jc3MtY29uc3RhbnRzLmpzIl0sIm5hbWVzIjpbImNvbG9ycyIsIndoaXRlIiwiZGFya0dyZXkiLCJtZWRHcmV5IiwibGlnaHRHcmV5IiwidHVycXVvaXNlIiwiZm9udHMiLCJvcGVuU2FucyIsInNvdXJjZVNhbnMiXSwibWFwcGluZ3MiOiI7Ozs7O0FBQU8sSUFBTTtTQUFTLEFBQ2IsQUFDUDtZQUZvQixBQUVWLEFBQ1Y7V0FIb0IsQUFHWCxBQUNUO2FBSm9CLEFBSVQsQUFDWDthQUxLLEFBQWUsQUFLVCxBQUdiO0FBUnNCLEFBQ3BCOztBQU9LLElBQU07WUFBUSxBQUNULEFBQ1Y7Y0FGSyxBQUFjLEFBRVA7QUFGTyxBQUNuQiIsImZpbGUiOiJjc3MtY29uc3RhbnRzLmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9lcmljL2Rldi9jaGFsbGVuZ2VzL0ludmlzaW9uL3NpbXBseXNvY2lhbCJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0YXRpYy9jc3MtY29uc3RhbnRzLmpzIl0sIm5hbWVzIjpbImNvbG9ycyIsIndoaXRlIiwiZGFya0dyZXkiLCJtZWREYXJrR3JleSIsIm1lZEdyZXkiLCJtZWRMaWdodEdyZXkiLCJsaWdodEdyZXkiLCJ0dXJxdW9pc2UiLCJmb250cyIsIm9wZW5TYW5zIiwic291cmNlU2FucyJdLCJtYXBwaW5ncyI6Ijs7Ozs7QUFBTyxJQUFNO1NBQVMsQUFDYixBQUNQO1lBRm9CLEFBRVYsQUFDVjtlQUhvQixBQUdQLEFBQ2I7V0FKb0IsQUFJWCxBQUNUO2dCQUxvQixBQUtOLEFBQ2Q7YUFOb0IsQUFNVCxBQUNYO2FBUEssQUFBZSxBQU9ULEFBR2I7QUFWc0IsQUFDcEI7O0FBU0ssSUFBTTtZQUFRLEFBQ1QsQUFDVjtjQUZLLEFBQWMsQUFFUDtBQUZPLEFBQ25CIiwiZmlsZSI6ImNzcy1jb25zdGFudHMuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2VyaWMvZGV2L2NoYWxsZW5nZXMvSW52aXNpb24vc2ltcGx5c29jaWFsIn0=

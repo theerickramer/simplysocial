@@ -45,7 +45,7 @@ export default class SubNav extends Component {
             display: inline-flex;
             margin-right: 35px;
             padding: 15px 10px;
-            opacity: .5;            
+            opacity: .5;   
           }
           .sub-nav__item--active {
             opacity: 1;

@@ -2,15 +2,15 @@ import React from 'react';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
 import SubNav from '../components/SubNav';
-import Posts from '../components/Posts'
-import { fonts } from '../static/css-constants';
+import Posts from '../components/Posts';
+import { colors, fonts } from '../static/css-constants';
 
 export default () => (
   <div>
     <Nav />
     <Header />
     <SubNav />
-    < Posts />
+    <Posts />
     <style jsx global>{`
       @import url('https://fonts.googleapis.com/css?family=Open+Sans');
       @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
@@ -34,12 +34,25 @@ export default () => (
         resize: none;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
         margin: 0;
       }
 
-      p, span {
-        font-size: 10px;
+      p,
+      span {
+        font-size: 14px;
+      }
+
+      a {
+        color: ${colors.lightGrey} !important;
+        cursor: auto !important;
+        text-decoration: none !important;
       }
     `}</style>
   </div>

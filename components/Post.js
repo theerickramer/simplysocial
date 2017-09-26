@@ -7,12 +7,18 @@ export default class Post extends Component {
     return (
       <li className="post" key={id}>
         <img className="post__avatar" src="/static/images/user-avatar.png" />
-        <div className="post__copy">
-          <h6 className="post__name">{name}</h6>
+        <div className="post__content">
+          <h5 className="post__name">{name}</h5>
           <p
             className="post__text"
             dangerouslySetInnerHTML={{ __html: text }}
           />
+          <div className="post__extra">
+            <div className="post__expand">
+              <span>Expand</span>
+              <img src="/static/images/down-arrow.png" />
+            </div>
+          </div>
         </div>
         <div className="post__options">
           <img className="post__reply" src="/static/images/reply-arrow.png" />
@@ -30,18 +36,26 @@ export default class Post extends Component {
             border-radius: 5px;
             color: ${colors.medGrey};
           }
-          .post__copy {
+          .post__content {
             display: flex;
             flex-direction: column;
+            padding-left: 20px;
           }
           .post__avatar,
-          .post__copy {
+          .post__content {
             display: inline-flex;
           }
-          .post__name,
+          .post__avatar {
+            height: 40px;
+            width: 40px;
+          }
+          .post__name {
+            margin-bottom: 15px;
+            color: ${colors.medDarkGrey};            
+          }
           .post__text {
-            margin-left: 20px;
-            color: ${colors.medGrey};
+            margin-bottom: 25px;
+            color: ${colors.medDarkGrey};
           }
           .post__options {
             position: absolute;
@@ -54,6 +68,18 @@ export default class Post extends Component {
             display: inline-flex;
             margin-left: 20px;
             color: ${colors.lightGrey};
+          }
+          .post__expand {
+            display: flex;
+            align-items: center;
+          }
+          .post__expand span {
+            margin-right: 10px;
+            color: ${colors.lightGrey};
+            font-size: 10px;
+          }
+          .post__expand img {
+            opacity: 0.4;
           }
           .heart.icon {
             color: ${colors.lightGrey};
