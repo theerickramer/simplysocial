@@ -12,7 +12,7 @@ export default class Posts extends Component {
   mapPosts() {
     return this.state.posts.map(post => {
       return (
-        <Post { ...post } />
+        <Post { ...post } key={post.id}/>
       );
     });
   }

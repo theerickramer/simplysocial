@@ -5,7 +5,7 @@ export default class Post extends Component {
   render() {
     const { id, avatar, name, text, time, more, image } = this.props;
     return (
-      <li className="post" key={id}>
+      <li className="post">
         <div className="post__content-container">
           <img className="post__avatar" src={avatar} />
           <div className="post__content">
