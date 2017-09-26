@@ -6,36 +6,51 @@ export default class Post extends Component {
     const { id, avatar, name, text, time, more, image } = this.props;
     return (
       <li className="post" key={id}>
-        <img className="post__avatar" src={avatar} />
-        <div className="post__content">
-          <h5 className="post__name">{name}</h5>
-          <p
-            className="post__text"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-          {more ? (
-            <div className="post__extra">
-              <div className="post__expand">
-                <span>Expand</span>
-                <img src="/static/images/down-arrow.png" />
+        <div className="post__content-container">
+          <img className="post__avatar" src={avatar} />
+          <div className="post__content">
+            <h5 className="post__name">{name}</h5>
+            <p
+              className="post__text"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
+            {more ? (
+              <div className="post__extra">
+                <div className="post__expand">
+                  <span>Expand</span>
+                  <img src="/static/images/down-arrow.png" />
+                </div>
               </div>
+            ) : null}
+            <div className="post__options">
+              <img
+                className="post__reply"
+                src="/static/images/reply-arrow.png"
+              />
+              <div className="post__like heart icon" />
+              <span className="post__time">{time}</span>
             </div>
-          ) : null}
+          </div>
         </div>
-        <div className="post__options">
-          <img className="post__reply" src="/static/images/reply-arrow.png" />
-          <div className="post__like heart icon" />
-          <span className="post__time">{time}</span>
-        </div>
+        {image ? (
+          <div className="post__image-container">
+            <img className="post__image" src={image} />
+          </div>
+        ) : null}
+
         <style jsx>{`
           .post {
             display: flex;
-            align-items: flex-start;
-            position: relative;
+            flex-direction: column;
             margin-bottom: 30px;
-            padding: 25px;
             border: 1px solid ${colors.lightGrey};
             border-radius: 5px;
+          }
+          .post__content-container {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            padding: 25px;
             color: ${colors.medGrey};
           }
           .post__content {
@@ -56,7 +71,6 @@ export default class Post extends Component {
             color: ${colors.medDarkGrey};
           }
           .post__text {
-            margin-bottom: 25px;
             color: ${colors.medDarkGrey};
           }
           .post__options {
@@ -74,6 +88,7 @@ export default class Post extends Component {
           .post__expand {
             display: flex;
             align-items: center;
+            margin-top: 25px;
           }
           .post__expand span {
             margin-right: 10px;
@@ -82,6 +97,17 @@ export default class Post extends Component {
           }
           .post__expand img {
             opacity: 0.4;
+          }
+          .post__image-container {
+            position: relative;
+            width: 100%;
+          }
+          .post__image {
+            margin-bottom: -5px;
+            margin-left: -1px;
+            width: 575px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
           }
           .heart.icon {
             color: ${colors.lightGrey};
