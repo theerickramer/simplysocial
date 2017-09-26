@@ -13,14 +13,14 @@ export default class Post extends Component {
             className="post__text"
             dangerouslySetInnerHTML={{ __html: text }}
           />
-          {more 
-            ? <div className="post__extra">
-                <div className="post__expand">
-                  <span>Expand</span>
-                  <img src="/static/images/down-arrow.png" />
-                </div>
+          {more ? (
+            <div className="post__extra">
+              <div className="post__expand">
+                <span>Expand</span>
+                <img src="/static/images/down-arrow.png" />
               </div>
-            : null}
+            </div>
+          ) : null}
         </div>
         <div className="post__options">
           <img className="post__reply" src="/static/images/reply-arrow.png" />
@@ -53,7 +53,7 @@ export default class Post extends Component {
           }
           .post__name {
             margin-bottom: 15px;
-            color: ${colors.medDarkGrey};            
+            color: ${colors.medDarkGrey};
           }
           .post__text {
             margin-bottom: 25px;
