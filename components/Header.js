@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewMessage from './NewMessage';
+import User from './User';
 import { colors, fonts } from '../static/css-constants';
 
 export default class Header extends Component {
@@ -7,7 +8,8 @@ export default class Header extends Component {
     return (
       <header>
         <div className="hero">
-          <NewMessage />
+          {/* <NewMessage /> */}
+          <User />
         </div>
         <style jsx>{`
           .hero {

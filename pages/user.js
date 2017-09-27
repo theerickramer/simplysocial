@@ -51,7 +51,7 @@ export default () => (
         font-size: 14px;
       }
 
-      a:not(.user__website) {
+      a {
         color: ${colors.lightGrey} !important;
         cursor: auto !important;
         text-decoration: none !important;

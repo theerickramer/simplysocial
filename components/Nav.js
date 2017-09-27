@@ -42,9 +42,9 @@ export default class Nav extends Component {
             width: 100%;
           }
 
-          .user-options__avatar {
-            height: 100%;
-            width: 100%;
+          .avatar {
+            height: 30px;
+            width: 30px%;
           }
 
           .nav__items,
