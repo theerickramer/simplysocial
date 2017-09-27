@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Link from 'next/link';
 import { colors, fonts } from '../static/css-constants';
 
 export default class Nav extends Component {
@@ -11,16 +12,33 @@ export default class Nav extends Component {
         <div className="nav__items-container">
           <ul className="nav__items">
             <li>
-              <img className="add-post-button" src="/static/images/new-message.png" />
+              <Link href="/">
+                <a>
+                  <img
+                    className="new-message"
+                    src="/static/images/new-message.png"
+                  />
+                </a>
+              </Link>
             </li>
             <li>
               <input className="search" />
             </li>
             <li>
-              <img className="avatar" src="/static/images/user-avatar.png" />
+              <Link href="/user">
+                <a>
+                  <img
+                    className="avatar"
+                    src="/static/images/user-avatar.png"
+                  />
+                </a>
+              </Link>
             </li>
             <li>
-              <img className="dropdown-arrow" src="/static/images/down-arrow.png" />
+              <img
+                className="dropdown-arrow"
+                src="/static/images/down-arrow.png"
+              />
             </li>
           </ul>
         </div>
@@ -56,12 +74,13 @@ export default class Nav extends Component {
           .search {
             margin: 0 23px;
             padding: 7px;
-            background: url('/static/images/search-icon.png') no-repeat right 5px center;
+            background: url('/static/images/search-icon.png') no-repeat right
+              5px center;
             background-color: ${colors.darkGrey};
             border: 1px solid ${colors.medGrey};
             border-radius: 3px;
             outline: none;
-            color: ${colors.white}
+            color: ${colors.white};
           }
 
           .dropdown-arrow {

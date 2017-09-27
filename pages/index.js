@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
+import NewMessage from '../components/NewMessage';
 import SubNav from '../components/SubNav';
 import Posts from '../components/Posts';
 import Footer from '../components/Footer';
@@ -9,7 +10,9 @@ import { colors, fonts } from '../static/css-constants';
 export default () => (
   <div>
     <Nav />
-    <Header />
+    <Header>
+      <NewMessage />
+    </Header>
     <SubNav />
     <Posts />
     <Footer />
@@ -55,6 +58,10 @@ export default () => (
         color: ${colors.lightGrey} !important;
         cursor: auto !important;
         text-decoration: none !important;
+      }
+
+      .button {
+        cursor: pointer;
       }
     `}</style>
   </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
+import User from '../components/User';
 import SubNav from '../components/SubNav';
 import Posts from '../components/Posts';
 import Footer from '../components/Footer';
@@ -9,7 +10,9 @@ import { colors, fonts } from '../static/css-constants';
 export default () => (
   <div>
     <Nav />
-    <Header />
+    <Header>
+      <User />
+    </Header>
     <SubNav />
     <Posts />
     <Footer />
