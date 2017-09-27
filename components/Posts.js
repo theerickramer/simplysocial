@@ -24,6 +24,7 @@ export default class Posts extends Component {
         <style jsx>{`
           main {
             padding-bottom: 120px;
+            border-bottom: 1px solid ${colors.lightGrey};
           }
           .posts {
             padding: 50px 0 60px 0;
@@ -31,7 +32,6 @@ export default class Posts extends Component {
             width: 575px;
           }
           .load-more {
-            margin: 0 auto;
             color: ${colors.lightGrey};
             font-size: 10px;
             font-weight: 700;
