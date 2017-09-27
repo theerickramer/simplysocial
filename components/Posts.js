@@ -20,11 +20,22 @@ export default class Posts extends Component {
     return (
       <main>
         <ul className="posts">{this.mapPosts()}</ul>
+        <div className="load-more">LOAD MORE</div>
         <style jsx>{`
+          main {
+            padding-bottom: 120px;
+          }
           .posts {
-            padding-top: 50px;
+            padding: 50px 0 60px 0;
             margin: 0 auto;
             width: 575px;
+          }
+          .load-more {
+            margin: 0 auto;
+            color: ${colors.lightGrey};
+            font-size: 10px;
+            font-weight: 700;
+            text-align: center;
           }
         `}</style>
       </main>
