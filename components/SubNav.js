@@ -25,7 +25,7 @@ export default class SubNav extends Component {
           .sub-nav {
             position: relative;
             margin: 0 auto;
-            margin-top: -49px;
+            margin-top: -47px;
             width: 575px;
             font-family: ${fonts.openSans};
             color: ${colors.white};

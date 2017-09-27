@@ -8,7 +8,7 @@ var colors = exports.colors = {
   darkGrey: '#262728',
   medDarkGrey: '#64686E',
   medGrey: '#44474B',
-  medLightGrey: '#D6D8DA',
+  medLightGrey: '#93979D',
   lightGrey: '#DDE0E4',
   turquoise: '#00CC99'
 };

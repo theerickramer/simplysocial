@@ -68,12 +68,12 @@ export default class Post extends Component {
           }
           .post__name {
             margin-bottom: 10px;
-            color: ${colors.medDarkGrey};
+            color: ${colors.medGrey};
           }
           .post__text {
             max-width: 420px;
             line-height: 25px;
-            color: ${colors.medDarkGrey};
+            color: ${colors.medLightGrey};
           }
           .post__options {
             position: absolute;
