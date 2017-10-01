@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 
 export const initState = {
   user: {
+    avatar: '/static/images/user-avatar.png',
     name: 'Kaitlyn Smith',
     blurb: 'Composer & Modular Synthesist',
     website: 'www.kaitlynaureliasmith.com',

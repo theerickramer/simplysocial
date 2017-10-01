@@ -29,7 +29,7 @@ export default class Nav extends Component {
                 <a>
                   <img
                     className="avatar"
-                    src="/static/images/user-avatar.png"
+                    src={this.props.avatar}
                   />
                 </a>
               </Link>

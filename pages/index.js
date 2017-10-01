@@ -13,7 +13,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Nav avatar={this.props.user.avatar} />
         <Header>
           <NewMessage {...this.props.user} />
         </Header>
