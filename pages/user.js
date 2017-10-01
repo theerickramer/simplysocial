@@ -10,7 +10,7 @@ import withRedux from 'next-redux-wrapper';
 
 export default withRedux(makeStore, state => state)(({ user, posts }) => (
   <div>
-    <Nav />
+    <Nav avatar={user.avatar} />
     <Header>
       <User {...user} />
     </Header>
