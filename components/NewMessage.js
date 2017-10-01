@@ -9,16 +9,21 @@ class NewMessage extends Component {
   _onKeyPress(e) {
     const { id, avatar, name, text, time, liked } = this.state;
     if(e.key === 'Enter') {
-      console.log(e.key)
       this.props.dispatch(post({ id, avatar, name, text, time, liked }));    
+      this.setState({text: ''});
     }
   }
   _onChange(e) {
     const { id, avatar, name } = this.props;
     const text = e.target.value;
-    const time = moment().format('hh');
+    const time = moment().format('h');
     const liked = false;
-    this.setState({ id, avatar, name, text, time, liked });
+    if (text.slice(-1) === '\n') {
+      this.setState({text: ''})
+      this.refs.textarea.value = '';
+    } else {
+      this.setState({ id, avatar, name, text, time, liked });
+    }
   }
   render() {
     return (
@@ -30,6 +35,7 @@ class NewMessage extends Component {
           value={this.props.text}
           onChange={this._onChange.bind(this)}
           onKeyPress={this._onKeyPress.bind(this)}
+          ref="textarea"
         />
         <div className="add-photo">
           <img className="add-photo__image" src="/static/images/camera.png" />
