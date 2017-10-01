@@ -52,7 +52,7 @@ export const initState = {
 };
 
 export const like = id => ({
-  type: 'LIKE',
+  type: 'LIKED',
   id: id
 });
 
@@ -64,7 +64,7 @@ export const post = ({id, avatar, name, text, time, more, image, liked }) => ({
 export const reducer = (state = initState, action) => {
   const posts = [...state.posts];
   switch (action.type) {
-    case 'LIKE':
+    case 'LIKED':
       const postsCopy = posts.map(post => {
         if (post.id === action.id) {
           post.liked = !post.liked;

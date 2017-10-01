@@ -72,7 +72,7 @@ var initState = exports.initState = {
 
 var like = exports.like = function like(id) {
   return {
-    type: 'LIKE',
+    type: 'LIKED',
     id: id
   };
 };
@@ -98,7 +98,7 @@ var reducer = exports.reducer = function reducer() {
 
   var posts = [].concat((0, _toConsumableArray3.default)(state.posts));
   switch (action.type) {
-    case 'LIKE':
+    case 'LIKED':
       var postsCopy = posts.map(function (post) {
         if (post.id === action.id) {
           post.liked = !post.liked;
