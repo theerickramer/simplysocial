@@ -1,14 +1,21 @@
 {
-  "name": "simplysocial",
+  "name": "next-with-redux-example",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "next"
+    "dev": "next",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "next build"
   },
   "dependencies": {
     "next": "^3.2.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "next-redux-wrapper": "^1.3.4",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0"
   }
 }

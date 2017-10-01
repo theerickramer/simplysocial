@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { colors, fonts } from '../static/css-constants';
 
-export default class SubNav extends Component {
+export default class SubNavHome extends Component {
   state = {};
   render() {
     return (
@@ -12,10 +12,10 @@ export default class SubNav extends Component {
           <li className="sub-nav__item">VIDEOS</li>
           <li className="sub-nav__item">
             <ul className="sub-nav__item--disclosures">
-              <li className="sub-nav__item--disclosure">
+              <li className="sub-nav__item--disclosure sub-nav__item--active">
                 <div className="icon three-lines" />
               </li>
-              <li className="sub-nav__item--disclosure sub-nav__item--active">
+              <li className="sub-nav__item--disclosure">
                 <div className="icon four-squares" />
               </li>
             </ul>
@@ -45,7 +45,7 @@ export default class SubNav extends Component {
             display: inline-flex;
             margin-right: 35px;
             padding: 15px 10px;
-            opacity: .5;   
+            opacity: 0.5;
           }
           .sub-nav__item--active {
             opacity: 1;
@@ -61,7 +61,8 @@ export default class SubNav extends Component {
             margin-left: 35px;
             height: 10px;
             width: 10px;
-            opacity: .5;          }
+            opacity: 0.5;
+          }
 
           .three-lines.icon {
             color: #000;
@@ -92,7 +93,7 @@ export default class SubNav extends Component {
             width: 3px;
             height: 3px;
             border-right: solid 3px ${colors.white};
-            border-left: solid 3px ${colors.white};            
+            border-left: solid 3px ${colors.white};
           }
 
           .icon.four-squares:before {

@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import { colors, fonts } from '../static/css-constants';
+import { post } from '../redux/store';
+import { connect } from 'react-redux';
 
-export default class NewMessage extends Component {
-  state = { value: ``};
+class NewMessage extends Component {
   onChange(val) {
-    this.state.value = val
+    const { id, avatar, name } = this.props;
+    const text = val;
+    const time = new Date();
+    const liked = false;
+    this.props.dispatch(post({ id, avatar, name, text, time, liked }));
   }
   render() {
     return (
@@ -13,15 +18,18 @@ export default class NewMessage extends Component {
           rows="2"
           className="new-message__input"
           placeholder="What's On Your Mind?"
-          value={this.state.value}
-          onChange={this.onChange}
+          value={this.props.text}
+          onChange={this.onChange.bind(this)}
         />
         <div className="add-photo">
           <img className="add-photo__image" src="/static/images/camera.png" />
           <span className="add-photo__text">Add Photo</span>
         </div>
         <div className="add-video">
-          <img className="add-video__image" src="/static/images/video-camera.png" />
+          <img
+            className="add-video__image"
+            src="/static/images/video-camera.png"
+          />
           <span className="add-photo__text">Add Video</span>
         </div>
         <style jsx>{`
@@ -84,3 +92,5 @@ export default class NewMessage extends Component {
     );
   }
 }
+
+export default connect(state => state)(NewMessage);

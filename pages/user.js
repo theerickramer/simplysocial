@@ -1,20 +1,21 @@
-import React from 'react';
 import Header from '../components/Header';
-import Nav from '../components/Nav';
 import User from '../components/User';
-import SubNav from '../components/SubNav';
+import Nav from '../components/Nav';
+import SubNavUser from '../components/SubNavUser';
 import Posts from '../components/Posts';
 import Footer from '../components/Footer';
 import { colors, fonts } from '../static/css-constants';
+import { makeStore } from '../redux/store';
+import withRedux from 'next-redux-wrapper';
 
-export default () => (
+export default withRedux(makeStore, state => state)(({ user, posts }) => (
   <div>
     <Nav />
     <Header>
-      <User />
+      <User {...user} />
     </Header>
-    <SubNav />
-    <Posts />
+    <SubNavUser {...user} />
+    <Posts posts={posts} />
     <Footer />
     <style jsx global>{`
       @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -54,11 +55,11 @@ export default () => (
         font-size: 14px;
       }
 
-      a {
+      a:not(.user__website) {
         color: ${colors.lightGrey} !important;
         cursor: auto !important;
         text-decoration: none !important;
       }
     `}</style>
   </div>
-);
+));
