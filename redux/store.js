@@ -1,7 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
+import moment from 'moment';
 
+const now = moment();
 export const initState = {
   user: {
     id: 1,    
@@ -20,26 +22,28 @@ export const initState = {
       name: 'Kaitlyn Smith',
       text:
         'Wow wow wow Wow wow wow Wow wow so so so so so so so so cool <a href="http://google.com">http://google.com</a>',
-      time: '7hr',
+      time: now.subtract(30, 'seconds').format('LLL'),
       liked: false,
       more: true
     },
     {
       id: 2,
+      userId: 2,      
       avatar: '/static/images/avatar-2.png',
       name: 'Eliane Radigue',
       text: 'Beautiful',
-      time: '8hr',
+      time: now.subtract(2, 'minutes').format('LLL'),
       liked: false,
       more: false,
       image: '/static/images/photo.png'
     },
     {
       id: 3,
+      userId: 3,      
       avatar: '/static/images/avatar-3.png',
       name: 'Suzanne Ciani',
       text: 'OMG I <3 movies',
-      time: '9hr',
+      time: now.subtract(3, 'hours').format('LLL'),
       liked: false,
       more: false,
       image: '/static/images/video.png'
@@ -71,8 +75,9 @@ export const reducer = (state = initState, action) => {
       });
       return { ...state, posts };
     case 'POST':
-      const { id, avatar, name, text, time, more, image, liked } = action.payload;
-      posts.unshift({ id, avatar, name, text, time, more, image, liked });
+      const id = state.posts.length + 1
+      const { userId, avatar, name, text, time, more, image, liked } = action.payload;
+      posts.unshift({ id, userId, avatar, name, text, time, more, image, liked });
       return { ...state, posts };
     default:
       return state;

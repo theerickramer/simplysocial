@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import { like } from '../redux/store';
 import classnames from 'classnames';
 import Link from 'next/link';
+import moment from 'moment';
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -16,6 +17,9 @@ const Post = ({ id, avatar, name, text, time, more, image, liked, like }) => {
   const selectedClass = () => {
     return classnames({ 'post__like heart icon': true, selected: liked });
   };
+  const now = moment();
+  const timeToMoment = moment(time);
+  const timeDiff = timeToMoment.to(now, true)
 
   return (
     <li className="post">
@@ -38,7 +42,7 @@ const Post = ({ id, avatar, name, text, time, more, image, liked, like }) => {
           <div className="post__options">
             <img className="post__reply" src="/static/images/reply-arrow.png" />
                 <div className={selectedClass()} onClick={() => like(id)} />
-            <span className="post__time">{time}</span>
+            <span className="post__time">{timeDiff}</span>
           </div>
         </div>
       </div>
