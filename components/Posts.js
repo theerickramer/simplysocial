@@ -4,7 +4,15 @@ import { colors } from '../static/css-constants';
 
 export default class Posts extends Component {
   mapPosts() {
-    return this.props.posts.map(post => {
+    const { posts, user } = this.props;
+    if (user) {
+      return posts.filter(post => post.id === user || post.liked).map(post => {
+        return (
+          <Post { ...post } key={post.id}/>
+        );
+      });
+    }
+    return posts.map(post => {
       return (
         <Post { ...post } key={post.id}/>
       );
