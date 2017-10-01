@@ -56,9 +56,9 @@ export const like = id => ({
   id: id
 });
 
-export const post = ({id, avatar, name, text, time, more, image, liked }) => ({
+export const post = ({ userId, avatar, name, text, time, more, image, liked }) => ({
   type: 'POST',
-  payload: { id, avatar, name, text, time, more, image, liked }
+  payload: { userId, avatar, name, text, time, more, image, liked }
 });
 
 export const reducer = (state = initState, action) => {

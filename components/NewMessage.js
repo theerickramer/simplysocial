@@ -7,10 +7,10 @@ import moment from 'moment';
 class NewMessage extends Component {
   state = {};
   _onKeyPress(e) {
-    const { id, avatar, name, text, liked } = this.state;
+    const { userId, avatar, name, text, liked } = this.state;
     const time = moment();
     if(e.key === 'Enter') {
-      this.props.dispatch(post({ id, avatar, name, text, time, liked }));    
+      this.props.dispatch(post({ userId, avatar, name, text, time, liked }));    
       this.setState({text: ''});
     }
   }
@@ -23,7 +23,7 @@ class NewMessage extends Component {
       this.setState({text: ''})
       this.refs.textarea.value = '';
     } else {
-      this.setState({ id, avatar, name, text, time, liked });
+      this.setState({ userId: id, avatar, name, text, time, liked });
     }
   }
   render() {

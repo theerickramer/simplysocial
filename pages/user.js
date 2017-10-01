@@ -15,7 +15,7 @@ export default withRedux(makeStore, state => state)(({ user, posts }) => (
       <User {...user} />
     </Header>
     <SubNavUser {...user} />
-    <Posts posts={posts} user={user.id} />
+    <Posts posts={posts} userId={user.id} />
     <Footer />
     <style jsx global>{`
       @import url('https://fonts.googleapis.com/css?family=Open+Sans');
