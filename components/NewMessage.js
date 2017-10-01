@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import { colors, fonts } from '../static/css-constants';
 import { post } from '../redux/store';
 import { connect } from 'react-redux';
+import moment from 'moment';
 
 class NewMessage extends Component {
-  onChange(val) {
+  state = {};
+  _onKeyPress(e) {
+    const { id, avatar, name, text, time, liked } = this.state;
+    if(e.key === 'Enter') {
+      console.log(e.key)
+      this.props.dispatch(post({ id, avatar, name, text, time, liked }));    
+    }
+  }
+  _onChange(e) {
     const { id, avatar, name } = this.props;
-    const text = val;
-    const time = new Date();
+    const text = e.target.value;
+    const time = moment().format('hh');
     const liked = false;
-    this.props.dispatch(post({ id, avatar, name, text, time, liked }));
+    this.setState({ id, avatar, name, text, time, liked });
   }
   render() {
     return (
@@ -19,7 +28,8 @@ class NewMessage extends Component {
           className="new-message__input"
           placeholder="What's On Your Mind?"
           value={this.props.text}
-          onChange={this.onChange.bind(this)}
+          onChange={this._onChange.bind(this)}
+          onKeyPress={this._onKeyPress.bind(this)}
         />
         <div className="add-photo">
           <img className="add-photo__image" src="/static/images/camera.png" />
