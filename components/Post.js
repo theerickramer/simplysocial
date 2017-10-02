@@ -18,7 +18,7 @@ const mapDispatchToProps = dispatch => {
 class Post extends Component {
   state = { justLiked: false };
   componentWillReceiveProps(nextProps) {
-    if (nextProps.liked) {
+    if (!this.props.liked && nextProps.liked) {
       this.setState({ justLiked: true });
     }
   }
@@ -50,7 +50,7 @@ class Post extends Component {
     const timeToMoment = moment(time);
     const timeDiff = timeToMoment.to(now, true);
     return (
-      <FadeIn duration="1s" timingFunction="ease-in">
+      <FadeIn duration=".5s" timingFunction="ease-in">
         <li className="post">
           <div className="post__content-container">
             <img className="post__avatar" src={avatar} />
