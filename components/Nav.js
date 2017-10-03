@@ -74,8 +74,7 @@ export default class Nav extends Component {
           .search {
             margin: 0 23px;
             padding: 7px;
-            background: url('/static/images/search-icon.png') no-repeat right
-              5px center;
+            background: url('/static/images/search-icon.png') no-repeat 95%;
             background-color: ${colors.darkGrey};
             border: 1px solid ${colors.medGrey};
             border-radius: 3px;
